@@ -13,7 +13,6 @@ $(document).ready(function(){
       if($(window).scrollTop() > 0){
         $('.scroll-top').show();
       }
-      
       else{
         $('.scroll-top').hide();
       }
@@ -30,7 +29,7 @@ $(document).ready(function(){
 
       if(top > offset && top < offset + height){
         $('.navbar ul li a').removeClass('active')
-        $('.navbar').find(`[href="#${id}"]`).addClass('active');
+        $('.navbar').find([href="#${id}"]).addClass('active');
       }
 
     });
@@ -51,7 +50,5 @@ $(document).ready(function(){
       500,
       'linear'
       )
-
     })
-
 });
