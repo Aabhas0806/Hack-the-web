@@ -284,15 +284,18 @@ header .navbar ul li a:hover{
     padding: 1rem;
 }
 
-.cases .image{
-
-    height: 110vh;
-    width: 100%;
-    background-image:url(../img/covid-19.png);
+.case .image{
+    background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    height: 100%;
 }
+
+.cases .image img{
+    width: 105%;
+}
+
+
 
 
 
@@ -301,18 +304,18 @@ header .navbar ul li a:hover{
     text-align: center;
     padding: 1rem;
 }
-.Vaccination .image {
-    height: 75vh;
-    width: 100%;
-    background-image: url(../img/vaccine.png);
+
+
+.Vaccination .image{
+    background-position: center center;
     background-repeat: no-repeat;
-    background-color: #cccccc;
-    background-position: center;
     background-size: cover;
-   }
+    height: 100%;
+}
 
-
-
+.Vaccination .image img{
+    width: 105%;
+}
 
 
 
