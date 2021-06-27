@@ -1,0 +1,493 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&family=Source+Sans+Pro:ital,wght@0,300;1,300&display=swap');
+
+:root{
+    --red:#8336e9;
+    --blue:rgb(23, 163, 228);
+
+}
+
+*{
+ font-family: 'Source Sans Pro', sans-serif;
+ margin:0 ;
+ padding:0 ;
+ box-sizing: border-box;
+ outline: none; border: none;
+ text-decoration: none;
+ transition: all .1s cubic-bezier(0.16, 0.8, 0.62, 1.52) ;
+ text-transform: capitalize;
+}
+
+*::selection{
+    background:var(--red);
+    color: #fff;
+}
+
+html{
+    font-size: 70.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{
+    width: 1.5rem;
+}
+
+html::-webkit-scrollbar-track{
+    background-color: rgb(61, 2, 2);
+}
+
+html::-webkit-scrollbar-thumb{
+    background:rgb(3, 67, 70);
+}
+
+body{
+    background: #f9f9f9;
+}
+
+
+section{
+    min-height: 100vh;
+    padding:0 7%;
+    padding-top: 9rem;
+    border-radius: 5rem;
+    background:rgb(151, 218, 235);
+}
+
+
+.goal{
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 4rem;
+    background: var(--red);
+    color: #000;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+    font-size: 2.0rem;
+}
+
+.goal::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index:-1;
+    background: rgb(4, 126, 120);
+    clip-path: polygon(0 0,100% 0,0 0,0% 100%);
+    transition: .3s linear;
+}
+
+.goal::hover::before{
+    clip-path: polygon(0 0,100% 0,100% 100%,0% 100%);
+}
+
+
+
+
+.heading{
+    font-size: 4rem;
+    color: #000;
+}
+
+.heading span{
+    color: var(--red);
+} 
+header{
+    width: 100%;
+    background: #fff;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding:2.0rem 10% ;
+    box-sizing: 0.5rem 1.0rem rgba(2, 3, 39, 0.1);
+
+}
+
+header .logo{
+    font-size: 4.5rem ;
+    color: #666;
+}
+
+header .logo span{
+    color: var(--red);
+}
+
+header .navbar ul {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+}
+
+header .navbar ul li{
+    margin-left: 1.5rem;
+}
+
+header .navbar ul li a{
+    color: #999;
+    font-size: 2rem;
+}
+
+header .navbar ul li a:active,
+header .navbar ul li a:hover{
+    color: rgb(33, 49, 139);
+    border-bottom: .2rem solid var(--red);
+    padding: .5rem 0;
+}
+
+
+
+
+
+
+
+#menu{
+    font-size: 3rem;
+    color: #999;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+
+
+
+.home{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.home .image{
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.home .image img{
+    width: 105%;
+}
+
+.home .content{
+    flex: 1 1 40rem;
+}
+
+.home .content span{
+    color:#000;
+    font-size: 5rem;
+}
+
+.home .content h2{
+    color:#000;
+    font-size: 5rem;
+}
+
+.home .content p{
+    color:rgb(1, 4, 34);
+    font-size: 3rem;
+    padding: 1rem 0;
+}
+
+.home .heading{
+    text-align:center;
+    padding:1rem;
+}
+
+
+
+
+
+
+
+
+
+.symptoms{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.symptoms .content{
+    flex:1 1 80rem;
+}
+.symptoms .content p{
+    font-size: 2.5rem;
+    color: rgb(3, 61, 63);
+    padding: 1.5rem 0;
+}
+
+.symptoms .content ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.symptoms .content ul .second{
+    padding-left: 5rem;
+}
+
+.symptoms .content ul li{
+    margin-left: 2.5rem;
+    font-size:2rem;
+    color: rgb(5, 13, 80);
+    padding: 1rem 0;
+}
+
+
+
+
+
+
+
+
+.prevention .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+
+}
+
+.prevention .row .content{
+    padding: 1rem 0;
+    flex:1 1 30rem;
+}
+.prevention .row .content .heading{
+    color: rgb(87, 13, 121);
+}
+
+.prevention .row .content p{
+    font-size: 2.0rem;
+    color:rgb(5, 56, 54);
+    padding: 1rem 0;
+}
+
+.prevention .row .content ul li{
+    margin-left: 1rem;
+    font-size: 1.8rem;
+    color:rgb(9, 14, 41);
+    padding: 1.5rem 0;
+}
+
+
+
+
+.cases .heading{
+    text-align: center;
+    padding: 1rem;
+}
+
+.cases .image{
+
+    height: 75vh;
+    width: 100%;
+    background-image:url(../img/covid.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.Vaccination .heading{
+    text-align: center;
+    padding: 1rem;
+}
+.Vaccination .image {
+    height: 75vh;
+    width: 100%;
+    background-image: url(../img/vaccine.png);
+    background-repeat: no-repeat;
+    background-color: #cccccc;
+    background-position: center;
+    background-size: cover;
+   }
+
+
+
+
+
+
+.footer{
+    min-height:auto ;
+    padding-top:0;
+    background: rgb(10, 52, 58);
+}
+
+.footer .box-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footer .box-container .box{
+    flex:1 1 22rem;
+    margin: 2rem;
+}
+
+.footer .box-container .box h3{
+    font-size: 2.5rem;
+    color: rgb(144, 250, 227);
+    padding-bottom: 2rem;
+    font-weight: normal;
+}
+
+.footer .box-container .box p{
+    font-size: 1.5rem;
+    color:rgb(4, 236, 248);
+    padding:1rem 0;
+}
+
+.footer .box-container.box p i{
+    padding-right: 0.5rem;
+    color:var(--blue);
+}
+
+.footer .box-container .box a{
+    font-size: 1.5rem;
+    color:rgb(12, 209, 150);
+    padding: 1rem 0;
+    display: block;
+}
+
+.footer .box-container .box a:hover{
+    color:var(--blue);
+}
+
+.footer .box-container .box .avaiable a{
+    display:4rem;
+    width:4rem;
+    line-height:2rem;
+    text-align:center;
+    border-radius: 5rem ;
+    border: 0.1rem solid rgb(228, 222, 222);
+    margin-right: 1rem;
+}
+
+.footer .box-container .box .avaiable a:hover{
+    background: rgb(133, 198, 241);
+}
+
+.footer .credit{
+    padding:2rem 1rem;
+    text-align: center;
+    color:rgb(22, 184, 165);
+    font-weight: normal;
+    font-size: 2rem;
+    border-top:  0.5rem solid #fff;
+
+}
+
+.footer .credit a{
+color:rgb(247, 127, 127);
+}
+
+
+
+
+
+
+
+scroll-top{
+position: fixed;
+bottom:7.5rem;
+right: 2rem;
+z-index:100 ;
+display: none;
+}
+
+
+
+
+
+
+
+
+
+/* medis quries */
+
+@media (max-width:900px){
+    html{
+        font-size: 50%;
+    }
+}
+
+@media (max-width:750px){
+    #menu{
+        display: block;
+    }
+
+    header .navbar{
+        position: fixed;
+        top:8rem;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: rgb(64, 228, 240) ;
+        border-top: .2rem solid rgb(14, 4, 105);
+    }
+
+    header .navbar ul {
+        flex-flow:column;
+        padding: 2rem;
+    }
+
+    header .navbar ul li{
+        text-align: center;
+        width: 100%;
+        margin: 1rem 0;
+    }
+    
+    header .navbar ul li a{
+        display: block;
+        padding: 1rem;
+    }
+    header .navbar ul li a.active,
+    header .navbar ul li a:hover{
+        padding: 1rem;
+        background: (--red);
+        color: #fff;
+        border: none;
+        border-radius: 5rem;
+    }
+    
+    .first-times{
+        transform: rotate(180deg);
+    }
+
+    header .navbar.nav-toggle{
+        left: 0;
+    }
+    
+    .home .content{
+        text-align:center;
+    }
+
+    .prevent .row:last-child{
+        flex-flow: column-reverse;
+    }
+
+  
+}
+
+@media(maxwidth:500px){
+    html{
+        font-size: 50%;
+    }
+
+    section{
+        padding: 0 5%;
+        padding-top: 10rem;
+    }
+}
