@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     $('#menu').click(function(){
-        $(this).toggleClass('b-times');
+        $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
     });
 
     $(window).on('scroll load',function(){
 
-      $('#menu').removeClass('b-times');
+      $('#menu').removeClass('fa-times');
       $('.navbar').removeClass('nav-toggle');
 
       if($(window).scrollTop() > 0){

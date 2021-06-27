@@ -289,9 +289,9 @@ header .navbar ul li a:hover{
 
 .cases .image{
 
-    height: 75vh;
+    height: 110vh;
     width: 100%;
-    background-image:url(../img/covid.png);
+    background-image:url(../img/covid-19.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
