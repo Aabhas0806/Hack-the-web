@@ -1,13 +1,13 @@
 $(document).ready(function(){
 
     $('#menu').click(function(){
-        $(this).toggleClass('fa-times');
+        $(this).toggleClass('first-times');
         $('.navbar').toggleClass('nav-toggle');
     });
 
     $(window).on('scroll load',function(){
 
-      $('#menu').removeClass('fa-times');
+      $('#menu').removeClass('first-times');
       $('.navbar').removeClass('nav-toggle');
 
       if($(window).scrollTop() > 0){
@@ -23,7 +23,7 @@ $(document).ready(function(){
     $('section').each(function(){
 
       let height = $(this).height();
-      let offset = $(this).offset().top - 200;
+      let offset = $(this).offset().top -100;
       let id = $(this).attr('id');
       let top = $(window).scrollTop();
 
@@ -47,7 +47,7 @@ $(document).ready(function(){
         scrollTop : $($(this).attr('href')).offset().top,
 
       },
-      500,
+      100,
       'linear'
       )
     })
